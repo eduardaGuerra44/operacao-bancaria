@@ -1,9 +1,11 @@
+package br.com.alura.service.java;
+
 import br.com.alura.modelo.Opcao;
 import br.com.alura.modelo.Usuario;
 
 import java.util.Scanner;
 
-public class Operacao {
+public class Principal {
     public static void main(String[] args) {
         Usuario usuario = new Usuario("Camila", "Corrente", 3000);
 
@@ -23,8 +25,7 @@ public class Operacao {
 
 
         Scanner leitura = new Scanner(System.in);
-        usuario.setMoneyIn(leitura.nextInt());
-
+        TransacaoService transacaoService = new TransacaoService();
 
         int digito = 0;
         while (digito != 4) {
@@ -33,28 +34,22 @@ public class Operacao {
 
             switch (digito) {
                 case 1:
-                    System.out.println(Opcao.Consultar_Saldo);
+                    transacaoService.consultaSaldo(usuario);
                     break;
 
-                    case 2:
+                case 2:
                     System.out.println("DIGITE O VALOR A RECEBER: ");
-                    Scanner receber = new Scanner(System.in);
-                        usuario.setMoneyIn(receber.nextInt());
-                        System.out.println(Opcao.Receber_Valor);
+                    transacaoService.recebeValor(usuario);
                     break;
 
                 case 3:
                     System.out.println("DIGITE O VALOR QUE DESEJA TRANSFERIR: ");
-                    Scanner transferir = new Scanner(System.in);
-                    usuario.setMoneyOut(transferir.nextInt());
-                    System.out.println(Opcao.Transferir_Valor);
+                    transacaoService.transfereValor(usuario);
                     break;
 
                 case 4:
-                    System.out.println();
+                    transacaoService.encerrarPrograma(usuario);
             }
-
-
 
 
         }
