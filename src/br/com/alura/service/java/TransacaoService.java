@@ -21,15 +21,17 @@ public class TransacaoService {
 
     }
 
-    public void transfereValor(Usuario usuario) {
+    public boolean transfereValor(Usuario usuario) {
         int saldoAtual = usuario.getSaldo();
         int transferirValor = entrada.nextInt();
         int transferencia = saldoAtual - transferirValor;
 
         if (transferirValor > saldoAtual) {
             System.out.println("SALDO INSUFICIENTE");
+            return false;
         } else {
             System.out.println("TRANSFERÊNCIA REALIZADA COM SUCESSO" + "\n" + " SALDO ATUALIZADO: R$" + transferencia);
+            return true;
         }
 
     }
