@@ -1,19 +1,15 @@
 import br.com.alura.modelo.Usuario;
-import br.com.alura.service.java.TransacaoService;
+import br.com.alura.service.TransacaoService;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.mockito.Mockito;
-
 import java.util.Scanner;
-
 import static org.mockito.Mockito.mock;
 
 
-//import java.util.Scanner;
+
 
 public class TransacaoServiceTest {
-   // Scanner entrada = new Scanner(System.in);
-    
     @Test
     public void testandoATransferenciadoUsuarioComSaldoSuficiente(){
        Scanner entrada = mock(Scanner.class);

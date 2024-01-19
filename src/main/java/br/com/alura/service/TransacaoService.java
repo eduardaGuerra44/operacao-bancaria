@@ -1,4 +1,4 @@
-package br.com.alura.service.java;
+package br.com.alura.service;
 
 import br.com.alura.modelo.Usuario;
 

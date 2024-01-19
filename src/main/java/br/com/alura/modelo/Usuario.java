@@ -1,9 +1,9 @@
 package br.com.alura.modelo;
 
 public class Usuario {
-    private final String nome;
-    private final String tipoDaConta;
-    private final int saldo;
+    private  String nome;
+    private  String tipoDaConta;
+    private int saldo;
 
     public Usuario(String nome, String tipoDaConta, int saldo) {
         this.nome = nome;
