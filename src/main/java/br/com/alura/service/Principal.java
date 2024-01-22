@@ -1,6 +1,6 @@
 package br.com.alura.service;
-import br.com.alura.modelo.Opcao;
 import br.com.alura.modelo.Usuario;
+import br.com.alura.modelo.Opcao;
 
 import java.util.Scanner;
 
